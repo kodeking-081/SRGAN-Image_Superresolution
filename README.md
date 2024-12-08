@@ -3,6 +3,7 @@
   <img src="https://github.com/kodeking-081/SRGAN-Image_Superresolution/blob/main/images/monarch.png" alt="Image 1" width="45%">
   <img src="https://github.com/kodeking-081/SRGAN-Image_Superresolution/blob/main/images/out_srf_14_monarch.png" alt="Image 2" width="45%">
 </p>
+
 This repository contains a PyTorch implementation of SRGAN based on CVPR 2017 paper [Photo Realistic Single Image Super-Resolution Using a Generative Adversarial Network](https://arxiv.org/abs/1609.04802) by Christian Ledig et al. SRGAN is a deep learning-based model designed to perform super-resolution tasks, generating high-resolution (HR) images from low-resolution (LR) inputs.
 
 ## Introduction
