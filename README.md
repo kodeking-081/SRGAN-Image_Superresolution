@@ -44,4 +44,34 @@ You can get both the datasets at [kaggle](https://www.kaggle.com/). Download the
 #### 2.Generate low resolution images by downsampling:
 Using the [downsample.py](https://github.com/kodeking-081/SRGAN-Image_Superresolution/blob/main/downsample.py), generate Low Resolution(LR) image set from HR image set.
 
+### Training
+Run the train.py to train the SRGAN model. I have trained the model for 100 epochs with batch size=64.
+
+### Testing
+For testing, batch size is set to 1.
+* Run testimage.py to test single image.
+* Run testvideo.py to test the SRGAN model on video input.
+* Run testbenchmark.py to test the SRGAN model on benchmark dataset such as Set5, Set14 etc
+* Use testImgSet.py to first convert HR benchmark dataset to LR.*
+
+## Model Architechture
+![image](https://github.com/kodeking-081/SRGAN-Image_Superresolution/blob/main/Architechture(SRGAN).jpeg)
+
+### Generator
+* Based on ResNet with residual blocks.
+* Upsampling via sub-pixel convolution layers.
+
+### Discriminator
+* Deep CNN with LeakyReLU activations.
+* Binary classification output for real/fake.
+
+### Loss Functions
+Go through [loss.py](https://github.com/kodeking-081/SRGAN-Image_Superresolution/blob/main/loss.py) file.
+* Content Loss: MSE or VGG feature loss.
+* Adversarial Loss: Binary cross-entropy loss for GAN training.
+Get detailed insights on different [losses associated with SRGAN](https://paperswithcode.com/method/srgan)
+
+You can see the detailed document on [SRGAN Architechture](https://github.com/kodeking-081/SRGAN-Image_Superresolution/blob/main/archSRGAN.txt).
+Also, Go through [model.py](https://github.com/kodeking-081/SRGAN-Image_Superresolution/blob/main/model.py) to understand the code structure for architechture.
+
 
