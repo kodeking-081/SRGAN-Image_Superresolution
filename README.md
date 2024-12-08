@@ -76,4 +76,24 @@ Also, Go through [model.py](https://github.com/kodeking-081/SRGAN-Image_Superres
 
 ## Training
 The output val results obtained after training are stored at [/training_results/SRF_4](https://github.com/kodeking-081/SRGAN-Image_Superresolution/tree/main/training_results)
+### Training Results:
+#### Epoch 1:
+![image](https://github.com/kodeking-081/SRGAN-Image_Superresolution/blob/main/training_results/SRF_4/epoch_1_index_1.png)
+
+#### Epoch 50 :
+![image](https://github.com/kodeking-081/SRGAN-Image_Superresolution/blob/main/training_results/SRF_4/epoch_50_index_1.png)
+
+#### Epoch 100:
+![image](https://github.com/kodeking-081/SRGAN-Image_Superresolution/blob/main/training_results/SRF_4/epoch_100_index_1.png)
+
+## Testing
+Upscale_factor = 4
+* Test on a Single Image:
+  
+<p align="center">
+  <img src="https://github.com/kodeking-081/SRGAN-Image_Superresolution/blob/main/images/comic.png" alt="Image 1" width="45%">
+  <img src="https://github.com/kodeking-081/SRGAN-Image_Superresolution/blob/main/images/out_srf_14_comic.png" alt="Image 2" width="45%">
+</p>
+
+
 
