@@ -35,3 +35,13 @@ cd SRGAN-Image_Superresolution
 ### 2.Install dependencies
 pip install -r requirements.txt
 
+## Usage
+### Dataset Preparation
+#### 1.Collect the High Resolution Images:
+Using two separate datasets - DIV2K and CelebHqA, i have trained two different models. The DIV2K dataset consists of 800 high resolution images for training and 200 HR images for validation. Meanwhile, Frpm CelebHq dataset , I sampled 7000 images for training and 3000 images for validation.
+You can get both the datasets at [kaggle](https://www.kaggle.com/). Download the dataset and extract it into your dataset folder.
+
+#### 2.Generate low resolution images by downsampling:
+Using the [downsample.py](https://github.com/kodeking-081/SRGAN-Image_Superresolution/blob/main/downsample.py), generate Low Resolution(LR) image set from HR image set.
+
+
