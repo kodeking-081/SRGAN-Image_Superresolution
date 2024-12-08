@@ -74,4 +74,6 @@ Get detailed insights on different [losses associated with SRGAN](https://papers
 You can see the detailed document on [SRGAN Architechture](https://github.com/kodeking-081/SRGAN-Image_Superresolution/blob/main/archSRGAN.txt).
 Also, Go through [model.py](https://github.com/kodeking-081/SRGAN-Image_Superresolution/blob/main/model.py) to understand the code structure for architechture.
 
+## Training
+The output val results obtained after training are stored at [/training_results/SRF_4](https://github.com/kodeking-081/SRGAN-Image_Superresolution/tree/main/training_results)
 
