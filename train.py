@@ -30,8 +30,8 @@ if __name__ == '__main__':
     UPSCALE_FACTOR = opt.upscale_factor
     NUM_EPOCHS = opt.num_epochs
     
-    train_set = TrainDatasetFromFolder('data/DIV2K_train_HR', crop_size=CROP_SIZE, upscale_factor=UPSCALE_FACTOR)
-    val_set = ValDatasetFromFolder('data/DIV2K_valid_HR', upscale_factor=UPSCALE_FACTOR)
+    train_set = TrainDatasetFromFolder('path_to_train_HR_set', crop_size=CROP_SIZE, upscale_factor=UPSCALE_FACTOR)
+    val_set = ValDatasetFromFolder('path_to_valid_HR_set', upscale_factor=UPSCALE_FACTOR)
     train_loader = DataLoader(dataset=train_set, num_workers=4, batch_size=64, shuffle=True)
     val_loader = DataLoader(dataset=val_set, num_workers=4, batch_size=1, shuffle=False)
     
@@ -88,7 +88,6 @@ if __name__ == '__main__':
             ## The two lines below are added to prevent runetime error in Google Colab ##
             fake_img = netG(z)
             fake_out = netD(fake_img).mean()
-            ##
             g_loss = generator_criterion(fake_out, fake_img, real_img)
             g_loss.backward()
             
