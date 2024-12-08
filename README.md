@@ -1,5 +1,9 @@
 # SRGAN-Image_Superresolution
-This repository contains a PyTorch implementation of SRGAN based on CVPR 2017 paper [Photo-Realistic Single Image Super-Resolution Using a Generative Adversarial Network](https://arxiv.org/abs/1609.04802) by Christian Ledig et al. SRGAN is a deep learning-based model designed to perform super-resolution tasks, generating high-resolution (HR) images from low-resolution (LR) inputs.
+<p align="center">
+  <img src="https://github.com/kodeking-081/SRGAN-Image_Superresolution/blob/main/images/monarch.png" alt="Image 1" width="45%">
+  <img src="https://github.com/kodeking-081/SRGAN-Image_Superresolution/blob/main/images/out_srf_14_monarch.png" alt="Image 2" width="45%">
+</p>
+This repository contains a PyTorch implementation of SRGAN based on CVPR 2017 paper [Photo Realistic Single Image Super-Resolution Using a Generative Adversarial Network](https://arxiv.org/abs/1609.04802) by Christian Ledig et al. SRGAN is a deep learning-based model designed to perform super-resolution tasks, generating high-resolution (HR) images from low-resolution (LR) inputs.
 
 ## Introduction
 SRGAN utilizes a Generative Adversarial Network (GAN) framework, where:
@@ -76,24 +80,54 @@ Also, Go through [model.py](https://github.com/kodeking-081/SRGAN-Image_Superres
 
 ## Training
 The output val results obtained after training are stored at [/training_results/SRF_4](https://github.com/kodeking-081/SRGAN-Image_Superresolution/tree/main/training_results)
-### Training Results:
-#### Epoch 1:
+### Training Results[(Images)](https://github.com/kodeking-081/SRGAN-Image_Superresolution/tree/main/training_results/SRF_4):
+## Epoch 1:
 ![image](https://github.com/kodeking-081/SRGAN-Image_Superresolution/blob/main/training_results/SRF_4/epoch_1_index_1.png)
 
-#### Epoch 50 :
-![image](https://github.com/kodeking-081/SRGAN-Image_Superresolution/blob/main/training_results/SRF_4/epoch_50_index_1.png)
+## Epoch 50 :
+![image](https://github.com/kodeking-081/SRGAN-Image_Superresolution/blob/main/training_results/SRF_4/epoch_75_index_19.png)
 
-#### Epoch 100:
-![image](https://github.com/kodeking-081/SRGAN-Image_Superresolution/blob/main/training_results/SRF_4/epoch_100_index_1.png)
+## Epoch 100:
+![image](https://github.com/kodeking-081/SRGAN-Image_Superresolution/blob/main/training_results/SRF_4/epoch_100_index_20.png)
+
+### Training Results(Graphs):
+* DIV2K
+![image](https://github.com/kodeking-081/SRGAN-Image_Superresolution/blob/main/images/Div2kTrain.svg)
+
+* CELEBhq
+![image](https://github.com/kodeking-081/SRGAN-Image_Superresolution/blob/main/images/celebtraingraph.svg)
 
 ## Testing
 Upscale_factor = 4
-* Test on a Single Image:
-  
+### Test on a Single Image:
+  * DIV2K  Model:
 <p align="center">
   <img src="https://github.com/kodeking-081/SRGAN-Image_Superresolution/blob/main/images/comic.png" alt="Image 1" width="45%">
   <img src="https://github.com/kodeking-081/SRGAN-Image_Superresolution/blob/main/images/out_srf_14_comic.png" alt="Image 2" width="45%">
 </p>
+
+ * CELEBhq Model:
+<p align="center">
+  <img src="https://github.com/kodeking-081/SRGAN-Image_Superresolution/blob/main/images/monarch.png" alt="Image 1" width="45%">
+  <img src="https://github.com/kodeking-081/SRGAN-Image_Superresolution/blob/main/images/out_srf_14_monarch.png" alt="Image 2" width="45%">
+</p>
+
+### Test on Benchmark Dataset:
+  SET5
+  ### Using [Div2k model](https://github.com/kodeking-081/SRGAN-Image_Superresolution/blob/main/epochs/netG_epoch_4_300.pth):
+  
+  * PSNR= 26.4870 & SSIM=0.7661
+
+  ![image](https://github.com/kodeking-081/SRGAN-Image_Superresolution/blob/main/images/Set5benchresult300/baby_psnr_26.4870_ssim_0.7661.png)
+
+  ### Using [Celeb model](https://github.com/kodeking-081/SRGAN-Image_Superresolution/blob/main/epochs/netGc_epoch_4_84.pth):
+
+  * PSNR=21.0035 & SSIM=0.7198
+
+  ![image](https://github.com/kodeking-081/SRGAN-Image_Superresolution/blob/main/images/Set5resultG100/woman_psnr_21.0035_ssim_0.7198.png)
+
+
+
 
 
 
