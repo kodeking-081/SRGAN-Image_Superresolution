@@ -33,24 +33,25 @@ The main contributions of the SRGAN model:
 * VS Code
 
 ## Installation
-### 1.Clone the git repository:
+### 1. Clone the git repository:
 git clone https://github.com/kodeking-081/SRGAN-Image_Superresolution.git
+
 cd SRGAN-Image_Superresolution
 
-### 2.Install dependencies
+### 2. Install dependencies
 pip install -r requirements.txt
 
 ## Usage
 ### Dataset Preparation
-#### 1.Collect the High Resolution Images:
+#### 1. Collect the High Resolution Images:
 Using two separate datasets - DIV2K and CelebHqA, i have trained two different models. The DIV2K dataset consists of 800 high resolution images for training and 200 HR images for validation. Meanwhile, Frpm CelebHq dataset , I sampled 7000 images for training and 3000 images for validation.
 You can get both the datasets at [kaggle](https://www.kaggle.com/). Download the dataset and extract it into your dataset folder.
 
-#### 2.Generate low resolution images by downsampling:
+#### 2. Generate low resolution images by downsampling:
 Using the [downsample.py](https://github.com/kodeking-081/SRGAN-Image_Superresolution/blob/main/downsample.py), generate Low Resolution(LR) image set from HR image set.
 
 ### Training
-Run the train.py to train the SRGAN model. I have trained the model for 100 epochs with batch size=64.
+Run the train.py to train the SRGAN model. I have trained both the model for 100 epochs with batch size=64.
 
 ### Testing
 For testing, batch size is set to 1.
@@ -58,6 +59,13 @@ For testing, batch size is set to 1.
 * Run testvideo.py to test the SRGAN model on video input.
 * Run testbenchmark.py to test the SRGAN model on benchmark dataset such as Set5, Set14 etc
 * Use testImgSet.py to first convert HR benchmark dataset to LR.*
+
+ #### Output via Flask App:
+ To test the model, I have created a simple [app](https://github.com/kodeking-081/SRGAN-Image_Superresolution/blob/main/app.py) using Flask.
+ I even tried to superresolve the webcam input but the results werenot satisfactory.
+
+ ![image](https://github.com/kodeking-081/SRGAN-Image_Superresolution/blob/main/images/FlaskApp.png)
+ 
 
 ## Model Architechture
 ![image](https://github.com/kodeking-081/SRGAN-Image_Superresolution/blob/main/Architechture(SRGAN).jpeg)
@@ -83,6 +91,7 @@ Also, Go through [model.py](https://github.com/kodeking-081/SRGAN-Image_Superres
 The output val results obtained after training are stored at [/training_results/SRF_4](https://github.com/kodeking-081/SRGAN-Image_Superresolution/tree/main/training_results)
 ### Training Results[(Images)](https://github.com/kodeking-081/SRGAN-Image_Superresolution/tree/main/training_results/SRF_4):
 ## Epoch 1:
+The left one is Lower Resolution Image(LR) and the right one is the SuperResolution Image(SR)
 ![image](https://github.com/kodeking-081/SRGAN-Image_Superresolution/blob/main/training_results/SRF_4/epoch_1_index_1.png)
 
 ## Epoch 50 :
@@ -114,6 +123,8 @@ Upscale_factor = 4
 </p>
 
 ### Test on Benchmark Dataset:
+LR version of benchmark dataset are firt created using downsampling and then stored at /dataset/test/data and HR images are stored at /dataset/test/target.
+*The size of SR images should be equal to the size of HR images*
   SET5
   ### Using [Div2k model](https://github.com/kodeking-081/SRGAN-Image_Superresolution/blob/main/epochs/netG_epoch_4_300.pth):
   
@@ -127,6 +138,7 @@ Upscale_factor = 4
 
   ![image](https://github.com/kodeking-081/SRGAN-Image_Superresolution/blob/main/images/Set5resultG100/woman_psnr_21.0035_ssim_0.7198.png)
 
+*Make Sure to cite the [original paper](https://arxiv.org/abs/1609.04802) while using this repository.*
 
 
 
