@@ -31,3 +31,7 @@ The main contributions of the SRGAN model:
 ### 1.Clone the git repository:
 git clone https://github.com/kodeking-081/SRGAN-Image_Superresolution.git
 cd SRGAN-Image_Superresolution
+
+### 2.Install dependencies
+pip install -r requirements.txt
+
