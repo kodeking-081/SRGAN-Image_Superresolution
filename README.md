@@ -1,2 +1,2 @@
 # SRGAN-Image_Superresolution
-SRGAN based approach for photo realistic single image super-resolution.
+[pytorch](https://arxiv.org/abs/1609.04802)
