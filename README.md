@@ -44,7 +44,7 @@ pip install -r requirements.txt
 ## Usage
 ### Dataset Preparation
 #### 1. Collect the High Resolution Images:
-Using two separate datasets - DIV2K and CelebHqA, i have trained two different models. The DIV2K dataset consists of 800 high resolution images for training and 200 HR images for validation. Meanwhile, Frpm CelebHq dataset , I sampled 7000 images for training and 3000 images for validation.
+Using two separate datasets - DIV2K and CelebHqA, i have trained two different models. The DIV2K dataset consists of 800 high resolution images for training and 200 HR images for validation. Meanwhile, From CelebHq dataset , I sampled 7000 images for training and 3000 images for validation.
 You can get both the datasets at [kaggle](https://www.kaggle.com/). Download the dataset and extract it into your dataset folder.
 
 #### 2. Generate low resolution images by downsampling:
@@ -58,7 +58,7 @@ For testing, batch size is set to 1.
 * Run testimage.py to test single image.
 * Run testvideo.py to test the SRGAN model on video input.
 * Run testbenchmark.py to test the SRGAN model on benchmark dataset such as Set5, Set14 etc
-* Use testImgSet.py to first convert HR benchmark dataset to LR.*
+*Use testImgSet.py to first convert HR benchmark dataset to LR.*
 
  #### Output via Flask App:
  To test the model, I have created a simple [app](https://github.com/kodeking-081/SRGAN-Image_Superresolution/blob/main/app.py) using Flask.
