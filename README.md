@@ -126,7 +126,7 @@ Upscale_factor = 4
 LR version of benchmark dataset are firt created using downsampling and then stored at /dataset/test/data and HR images are stored at /dataset/test/target.
 *The size of SR images should be equal to the size of HR images*
 
-###  SET5
+####  SET5
   ### Using [Div2k model](https://github.com/kodeking-081/SRGAN-Image_Superresolution/blob/main/epochs/netG_epoch_4_300.pth):
   
   * PSNR= 26.4870 & SSIM=0.7661
